@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_07_31_174124) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_exercise", force: :cascade do |t|
+  create_table "user_exercises", force: :cascade do |t|
     t.integer "user_id"
     t.integer "exercise_id"
   end
@@ -41,6 +41,11 @@ ActiveRecord::Schema.define(version: 2018_07_31_174124) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "workout_exercises", force: :cascade do |t|
+    t.integer "workout_id"
+    t.integer "exercise_id"
+  end
+
   create_table "workouts", force: :cascade do |t|
     t.float "weight"
     t.integer "sets"
@@ -50,11 +55,6 @@ ActiveRecord::Schema.define(version: 2018_07_31_174124) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "workouts_exercises", force: :cascade do |t|
-    t.integer "workout_id"
-    t.integer "exercise_id"
   end
 
 end
