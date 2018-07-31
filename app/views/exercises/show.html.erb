@@ -1,0 +1,6 @@
+<%= render partial: "exercise", locals: {exercise: @exercise} %><br>
+
+<%= link_to "Edit exercise", edit_exercise_path(@exercise) %><br>
+<%= form_for @exercise, method: :delete do |f| %>
+<%= f.submit "DELETE☠️" %>
+<% end %>
