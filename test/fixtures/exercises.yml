@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  muscle_group: MyString
+  muscle_part: MyString
+  equipment: false
+  high_intensity: false
+
+two:
+  name: MyString
+  muscle_group: MyString
+  muscle_part: MyString
+  equipment: false
+  high_intensity: false

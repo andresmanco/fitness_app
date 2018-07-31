@@ -1,0 +1,6 @@
+<%= render partial: "user", locals: {user: @user} %><br><br>
+
+<%= link_to "Edit your profile", edit_user_path(@user) %>
+<%= form_for @user, method: :delete do |f| %><br><br>
+<%= f.submit "DELETE PROFILE" %>
+<% end %>
