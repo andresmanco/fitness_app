@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FitnessApp</title>
+    <title>Your workouts, always with you.</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
   </head>
 
   <body>
-    <%= yield %>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <a class="navbar-brand" class="navbar-left">
+      <%= image_tag "", width: 200 %>
+    </a>
+  </nav>
+
+
+<%= yield %>
+
+  <div class="container" id="alerts">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+
+  <div class="mastfoot">
+    <div class="inner">
+      <p>💪 Alvaro & Andress Fitness | All rights reserved 💪</p>
+    </div>
+  </div>
   </body>
+</html>
+
 </html>

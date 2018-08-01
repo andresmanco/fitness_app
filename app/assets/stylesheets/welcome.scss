@@ -1,0 +1,39 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "font-awesome";
+
+.main-header-image{
+  position: relative;
+  height: 400px;
+  margin-bottom: 0px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.title{
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -40px;
+}
+
+.title, .h1 {
+  color: black;
+}
+
+
+
+
+.card{
+  text-align: center;
+}
+
+#get-started-button{
+  margin: 0 auto;
+  width: 200px;
+}
