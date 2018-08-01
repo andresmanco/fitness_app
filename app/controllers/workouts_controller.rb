@@ -16,16 +16,14 @@ class WorkoutsController < ApplicationController
 
   def create
     @muscle_groups = ["Chest", "Back", "Shoulders", "Biceps", "Triceps", "Legs", "Abs", "Full-Body"]
-    @workout = Workout.new(weight: 0, sets: 0, reps: 0, rest_time: 0, date: Date.today, user_id: 1) #passing params
-    # binding.pry
+    @workout = Workout.new(date: Date.today, user_id: 1)
     arr = @workout.generate_random_workout(equipment= params[:equipment], muscle= params[:workout][:muscles])
     @workout.exercises = arr
     binding.pry
     if @workout.save
-      binding.pry
+      # binding.pry
       redirect_to workout_path(@workout)
     else
-      binding.pry
       render :new
     end
   end
@@ -53,7 +51,7 @@ class WorkoutsController < ApplicationController
   end
 
   def workout_params
-    params.require(:workout).permit(:user_id, :weight, :sets, :rest_time, :date)
+    params.require(:workout).permit(:user_id, :date)
   end
 
 end
