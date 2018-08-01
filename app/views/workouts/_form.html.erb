@@ -1,15 +1,10 @@
 <%= form_for workout do |f| %>
-<% @muscle_groups.each do |muscle_group| %>
+<h3>Pick up to 2 muscles</h3>
+<% muscle_groups.each do |muscle_group| %>
 <%= f.label muscle_group %>
 <%= f.check_box :muscles, {multiple: true}, muscle_group, false %><br>
 <% end %><br>
-<%= f.label :weight %>
-<%= f.number_field :weight, value: 0, class: :text_field, step: :any %><br>
-<%= f.label :sets %><br>
-<%= f.number_field :sets %><br>
-<%= f.label :reps %><br>
-<%= f.number_field :reps %><br>
-<%= f.label :rest_time %><br>
-<%= f.number_field :rest_time, value: 2, class: :text_field, step: :any %><br>
+<%= f.label "Do you have equipment?" %>
+<%= check_box_tag(:equipment) %><br>
 <%= f.submit %>
 <% end %>
