@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    binding.pry
     # checking_user = User.find_by(user_name: params[:user_name])
     @user = User.find_by(user_name: params[:user_name])
     # binding.pry
