@@ -16,13 +16,13 @@ class WorkoutsController < ApplicationController
 
   def create
     @muscle_groups = ["Chest", "Back", "Shoulders", "Biceps", "Triceps", "Legs", "Abs", "Full-Body"]
-    @workout = Workout.new(date: Date.today, user_id: 1)
+    @workout = Workout.new(date: Date.today, user_id: @user.id)
     arr = @workout.generate_random_workout(equipment= params[:equipment], muscle= params[:workout][:muscles])
     @workout.exercises = arr
-    binding.pry
+    # binding.pry
     if @workout.save
       # binding.pry
-      redirect_to workout_path(@workout)
+      redirect_to user_workout_path(@user, @workout)
     else
       render :new
     end
@@ -33,7 +33,7 @@ class WorkoutsController < ApplicationController
 
   def update
     if @workout.update(workout_params)
-      redirect_to workout_path
+      redirect_to user_workout_path(@user, @workout)
     else
       render :edit
     end
@@ -41,7 +41,7 @@ class WorkoutsController < ApplicationController
 
   def destroy
     @workout.destroy
-    redirect_to workout_path
+    redirect_to new_user_workout_path
   end
 
   private
