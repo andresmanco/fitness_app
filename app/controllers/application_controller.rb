@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
+  before_action :check_login
 
-  bedore_action :check_login
   private
 
   def check_login
