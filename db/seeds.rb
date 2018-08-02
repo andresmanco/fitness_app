@@ -6,6 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Exercise.destroy_all
+
+
+users = User.create([
+                              {user_name: 'alvarofitness', password: 'alvarofitness', first_name: 'Alvaro', last_name: 'De La Torre'},
+                              {user_name: 'sydney', password: 'sydney', first_name: 'Sydney', last_name: 'Barlow'},
+                              {user_name: 'rayan', password: 'rayan', first_name: 'Rayan', last_name: 'Estupido'},
+                              {user_name: 'ruby', password: 'ruby', first_name: 'Ruby', last_name: 'Rails'},
+                              {user_name: 'emily', password: 'emily', first_name: 'Emily', last_name: 'Collins'},
+                              {user_name: 'jhon', password: 'jhon', first_name: 'Jhon', last_name: 'Kenedy'}
+                              ])
+
+
+
+
 exercises = Exercise.create([
                                 {name: "Barbell Bench Press", muscle_group: "chest", muscle_part: "upper chest", high_intensity: false, equipment: true},
                                 {name: "Flat Bench Dumbbell Press",muscle_group: "chest", muscle_part: "upper chest", high_intensity: false, equipment: true},
