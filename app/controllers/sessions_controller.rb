@@ -1,29 +1,25 @@
 class SessionsController < ApplicationController
   skip_before_action :check_login, only: [:new, :create]
 
-  def hello
-    if params[:user_id] == "" || params[:user_id] == nil
-      redirect_to login_path
-  end
-
   def new
-    @user = User.new
   end
 
   def create
-    if params[:user_id] == "" || params[:user_id] == nil
-      redirect_to login_path
+    # checking_user = User.find_by(user_name: params[:user_name])
+    @user = User.find_by(user_name: params[:user_name])
+    # binding.pry
+    # @user = checking_user.authenticate(params[:password])
+    if @user.password == params[:password] && @user
+      session[:user_id] = @user.id
+      redirect_to user_path(@user)
     else
-      session[:user_id] = params[:user_id]
-      redirect_to root_path
+      flash[:alert] = "Incorrect username or password DUMBASS"
+      redirect_to login_path
     end
   end
 
   def destroy
-    if session[:user_id] == nil || session[:user_id] == ""
-      nil
-    else
-      session.delete :user_id
-    end
+  reset_session
+  redirect_to login_path
   end
 end

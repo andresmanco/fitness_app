@@ -1,12 +1,13 @@
 class ApplicationController < ActionController::Base
+  before_action :check_login
 
-  bedore_action :check_login
   private
 
   def check_login
     if !user_is_signed_in
       flash[:alert] = "Need to sign in"
       redirect_to login_path
+    end
   end
 
   def user_is_signed_in
