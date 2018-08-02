@@ -13,10 +13,23 @@
   <body>
 
   <nav class="navbar navbar-default navbar-fixed-top">
-    <a class="navbar-brand" class="navbar-left">
-      <%= image_tag "", width: 200 %>
-    </a>
+    <a class="navbar-brand" class="navbar-left"><%= image_tag "", width: 200 %></a>
+    <div class="btn-group show">
+      <% if session[:user_id] %>
+      <% user = User.find(session[:user_id]) %>
+          <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a> Welcome, <%= user.full_name %></a>
+          </button>
+          <div class="dropdown-menu dropdown-toggle-split">
+            <li><%= link_to "Edit Profile", edit_user_path(user) %></li>
+            <li><%= link_to "Sign Out", logout_path, method: 'delete' %></li>
+      <% else %>
+          <%= link_to "Log In ", login_path, class: 'btn-btn primary' %>
+      <% end %>
+      </div>
+    </div>
   </nav>
+
 
 
 <%= yield %>
@@ -32,6 +45,5 @@
     </div>
   </div>
   </body>
-</html>
 
 </html>
