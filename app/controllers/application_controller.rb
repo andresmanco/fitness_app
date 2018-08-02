@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
     if !user_is_signed_in
       flash[:alert] = "Need to sign in"
       redirect_to login_path
+    end
   end
 
   def user_is_signed_in
