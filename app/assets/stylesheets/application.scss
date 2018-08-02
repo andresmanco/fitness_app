@@ -16,22 +16,21 @@
  @import "welcome";
  @import "font-awesome";
 
- html {
-   position: relative;
-   min-height: 100%;
- }
+ body{
+  background-color: white;
+}
 
- body {
-   margin: 0 0 100px;
-   padding: 0px;
- }
+html{
+  width:100%;
+  height:100%;
+}
 
  .navbar-default{
-   background-color: white;
+   background-color: black;
  }
 
  body{
-   background-color: lightgray;
+   background-color: white;
  }
 
  .navbar-brand{
@@ -59,14 +58,21 @@
  }
 
  .card{
-   width:75%;
-   margin:auto;
-   margin-top:50px;
+   width: 30%;
+   margin: auto;
+   margin-top:170px;
    padding-left: 10px;
-   padding-right: 10px
+   padding-right: 10px;
+   background-color: white;
  }
+
 
  .btn-block{
    width: 20%;
    margin: auto;
  }
+
+.form-group{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
