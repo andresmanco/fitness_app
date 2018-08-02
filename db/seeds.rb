@@ -14,29 +14,29 @@ users = User.create([
                               {user_name: 'rayan', password: 'rayan', first_name: 'Rayan', last_name: 'Estupido'},
                               {user_name: 'ruby', password: 'ruby', first_name: 'Ruby', last_name: 'Rails'},
                               {user_name: 'emily', password: 'emily', first_name: 'Emily', last_name: 'Collins'},
-                              {user_name: 'jhon', password: 'jhon', first_name: 'Jhon', last_name: 'Kenedy'}
+                              {user_name: 'jhon', password: 'jhon', first_name: 'Jonh', last_name: 'Kennedy'}
                               ])
 
 
 
 
 exercises = Exercise.create([
-                                {name: "Barbell Bench Press", muscle_group: "chest", muscle_part: "upper chest", high_intensity: false, equipment: true},
-                                {name: "Flat Bench Dumbbell Press",muscle_group: "chest", muscle_part: "upper chest", high_intensity: false, equipment: true},
-                                {name: "Flat Bench Dumbbell Fly", muscle_group: "chest", muscle_part: "upper chest", high_intensity: false, equipment: true},
-                                {name: "Low-Incline Barbell Bench Press", muscle_part: "chest", muscle_group: "upper chest", high_intensity: false, equipment: true},
-                                {name: "Low-Incline Bench Dumbbell Press", muscle_part: "chest", muscle_group: "upper_chest", high_intensity: false, equipment: true},
-                                {name: "Low-Incline Bench Dumbbell Fly", muscle_part: "chest", muscle_group: "upper_chest", high_intensity: false, equipment: true},
-                                {name: "Push-ups", muscle_part: "chest", muscle_group: "middle_chest", high_intensity: true, equipment: false},
-                                {name: "Incline Push-ups", muscle_part: "chest", muscle_group: "upper_chest", high_intensity: true, equipment: false},
-                                {name: "Single Arm Dumbbell Row", muscle_part: "back", muscle_group: "lats", high_intensity: true, equipment: true},
-                                {name: "Wide Grip Pulldowns", muscle_part: "back", muscle_group: "lats", high_intensity: false, equipment: true},
-                                {name: "Under grip Pulldowns", muscle_part: "back", muscle_group: "lats", high_intensity: false, equipment: true},
-                                {name: "Straight Bar Cable Pulldown", muscle_part: "back", muscle_group: "lats", high_intensity: false, equipment: true},
-                                {name: "Seated Cable Close Grip Row", muscle_part: "back", muscle_group: "lats", high_intensity: false, equipment: true},
-                                {name: "Seated Cable Wide Grip Row", muscle_part: "back", muscle_group: "lats", high_intensity: false, equipment: true},
-                                {name: "Pull-ups", muscle_part: "back", muscle_group: "upper_back", high_intensity: true, equipment: false},
-                                {name: "Rowing Machine", muscle_part: "back", muscle_group: "midle_back", high_intensity: true, equipment: true},
+                                {name: "Barbell Bench Press", muscle_group: "upper chest", muscle_part: "chest", high_intensity: false, equipment: true},
+                                {name: "Flat Bench Dumbbell Press",muscle_group: "upper chest", muscle_part: "chest", high_intensity: false, equipment: true},
+                                {name: "Flat Bench Dumbbell Fly", muscle_group: "upper chest", muscle_part: "chest", high_intensity: false, equipment: true},
+                                {name: "Low-Incline Barbell Bench Press", muscle_part: "upper chest", muscle_group: "chest", high_intensity: false, equipment: true},
+                                {name: "Low-Incline Bench Dumbbell Press", muscle_part: "upper_chest", muscle_group: "chest", high_intensity: false, equipment: true},
+                                {name: "Low-Incline Bench Dumbbell Fly", muscle_part: "upper_chest", muscle_group: "chest", high_intensity: false, equipment: true},
+                                {name: "Push-ups", muscle_part: "middle_chest", muscle_group: "chest", high_intensity: true, equipment: false},
+                                {name: "Incline Push-ups", muscle_part: "upper_chest", muscle_group: "chest", high_intensity: true, equipment: false},
+                                {name: "Single Arm Dumbbell Row", muscle_part: "lats", muscle_group: "back", high_intensity: true, equipment: true},
+                                {name: "Wide Grip Pulldowns", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true},
+                                {name: "Under grip Pulldowns", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true},
+                                {name: "Straight Bar Cable Pulldown", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true},
+                                {name: "Seated Cable Close Grip Row", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true},
+                                {name: "Seated Cable Wide Grip Row", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true},
+                                {name: "Pull-ups", muscle_part: "upper_back", muscle_group: "back", high_intensity: true, equipment: false},
+                                {name: "Rowing Machine", muscle_part: "upper_back", muscle_group: "back", high_intensity: true, equipment: true},
                                 {name: "Seated Dumbbell Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true},
                                 {name: "Alternating Dumbbell Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true},
                                 {name: "Seated Arnold Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true },
