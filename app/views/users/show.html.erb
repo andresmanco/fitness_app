@@ -1,7 +1,28 @@
 <div class="card">
-  <%= render partial: "user", locals: {user: @user} %><br><br>
-  <%= link_to "Edit your profile", edit_user_path(@user), class: 'btn btn-primary' %>
-  <%= form_for @user, method: :delete do |f| %><br><br>
-  <%= f.submit "Delete Profile", class: 'btn btn-danger' %>
+
+  <%= render partial: "user", locals: {user: @user} %>
+<div class="row">
+  <div class="col-md-4">
+  <div>
+    <%= link_to "Edit your profile", edit_user_path(@user), class: 'btn btn-primary' %>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div>
+    <%= link_to "Create a New Workout", new_user_workout_path(@user), class: 'btn btn-success' %>
+  </div>
+</div>
+
+
+    <%= form_for @user, method: :delete do |f| %>
+<div class="col-md-4">
+  <div>
+    <%= f.submit "Delete Profile", class: 'btn btn-danger' %>
+  </div>
+</end>
+
   <% end %>
+
+  </div>
 </div>
