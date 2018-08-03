@@ -12,13 +12,13 @@ class ApplicationController < ActionController::Base
 
   def user_is_signed_in
     if params[:user_id]
-      binding.pry
+      # binding.pry
         session[:user_id] == params[:user_id].to_i && @user = User.find(session[:user_id])
     elsif params[:id]
-      binding.pry
+      # binding.pry
       session[:user_id] == params[:id].to_i && @user = User.find(session[:user_id])
     else
-      binding.pry
+      # binding.pry
       @user = User.find(session[:user_id])
     end
   end

@@ -1,5 +1,5 @@
 <% @workouts.each do |workout| %>
-  <li><%= link_to workout.date, user_workout_path(workout, @user) %></li>
+  <li><%= link_to workout.date, user_workout_path(@user, workout) %></li>
   <% muscles = (workout.exercises.map {|exercise| exercise.muscle_group}).uniq %>
   <% muscles.each do |muscle| %>
   <li><%= muscle %></li>
