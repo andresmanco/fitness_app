@@ -4,10 +4,12 @@ class WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.all.select { |workout| workout.user_id == @user.id }
+    # @workouts.each do |workout|
+    #   @muscles = (workout.exercises.each {|exercise| exercise.muscle_group}).uniq
+
   end
 
   def show
-
   end
 
   def new
@@ -43,7 +45,8 @@ class WorkoutsController < ApplicationController
 
   def destroy
     @workout.destroy
-    redirect_to new_user_workout_path
+    reset_session
+    redirect_to root_path
   end
 
   private
