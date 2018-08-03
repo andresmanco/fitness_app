@@ -43,18 +43,28 @@ html{
    left: 15px;
  }
 
-.mastfoot {
-   right: 0;
-   bottom: 0;
-   left: 0;
+.footer {
+   // right: 0;
+   // bottom: 0;
+   // left: 0;
    padding: 1rem;
    background-color: black;
    text-align: center;
+   position: absolute;
+   bottom: 0;
+   width:100%;
+   color: white;
+   // height: 50px;
+   // margin-top: -50px;
 }
 
- .inner{
-   color: white;
- }
+.content {
+  min-height: 100%;
+}
+
+.content-inside{
+  padding-bottom: 50px;
+}
 
  .buttons {
    margin-bottom: 10px,
@@ -63,10 +73,11 @@ html{
  .card{
    width:75%;
    margin:auto;
-   margin-top:50px;
+   margin-top:150px;
    padding-left: 10px;
    padding-right: 10px
  }
+
 
  .btn-block{
    width: 20%;
@@ -104,4 +115,8 @@ btn btn-primary btn-block
 
 .btn-primary, .btn-block {
     background-color: #C0C0C0 !important;
+}
+
+.subtitle {
+  text-align: center;
 }
