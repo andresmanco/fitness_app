@@ -2,21 +2,27 @@
 
   <%= render partial: "user", locals: {user: @user} %>
 <div class="row">
-  <div class="col-md-4">
+
+  <div class="col-md-3">
   <div>
-    <%= link_to "Edit your profile", edit_user_path(@user), class: 'btn btn-primary' %>
+    <%= link_to "Check My Workout Log", user_workouts_path(@user), class: 'btn btn-primary' %>
   </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-3">
   <div>
     <%= link_to "Create a New Workout", new_user_workout_path(@user), class: 'btn btn-success' %>
   </div>
 </div>
 
+  <div class="col-md-3">
+  <div>
+    <%= link_to "Edit your profile", edit_user_path(@user), class: 'btn btn-primary' %>
+  </div>
+</div>
 
-    <%= form_for @user, method: :delete do |f| %>
-<div class="col-md-4">
+  <%= form_for @user, method: :delete do |f| %>
+<div class="col-md-3">
   <div>
     <%= f.submit "Delete Profile", class: 'btn btn-danger' %>
   </div>
@@ -25,4 +31,5 @@
   <% end %>
 
   </div>
+</div>
 </div>
