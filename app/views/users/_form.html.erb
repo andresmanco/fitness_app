@@ -1,8 +1,8 @@
 
 <div class="card">
-  <div class="card-block"><br>
+  <div class="card-block">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-6">
 
       <%= form_for user do |f| %>
       <div class="form-group">
@@ -30,9 +30,10 @@
         <%= f.label :weight %>
         <%= f.number_field :weight, value: 0, class: :text_field, step: :any %>
       </div>
+    </div>
 
 
-    <div class="col-md-4">
+    <div class="col-md-6">
 
       <div class="form-group">
         <%= f.label :height %>
@@ -57,7 +58,6 @@
 
       <%= f.submit %>
       <% end %>
-      </div>
     </div>
   </div>
 </div>

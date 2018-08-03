@@ -1,5 +1,6 @@
-<br>
-<h2>Welcome, <%= "#{user.full_name}"%>. Here are your stats.</h2>
+<div class="subtitle">
+  <h1>Welcome, <%= "#{user.full_name}"%>. Here are your stats.</h1>
+</div>
 
 <table class="table table-dark">
   <thead>
@@ -9,7 +10,7 @@
 
   </thead>
   <tbody>
-    
+
     <tr>
       <th scope="row">Name</th>
       <td><%= user.first_name %></td>
