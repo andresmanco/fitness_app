@@ -1,29 +1,30 @@
-
+<br>
 <h2>Welcome, <%= "#{user.full_name}"%>. Here are your stats.</h2>
 
 <table class="table table-dark">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">User</th>
     </tr>
+
   </thead>
   <tbody>
+    
     <tr>
       <th scope="row">Name</th>
       <td><%= user.first_name %></td>
-
     </tr>
+
     <tr>
       <th scope="row">Last Name</th>
       <td><%= user.last_name %></td>
-
     </tr>
+
     <tr>
       <th scope="row">Weight</th>
       <td><%= user.weight %></td>
-
     </tr>
+
     <tr>
       <th scope="row">Height</th>
       <td><%= user.height %></td>
@@ -32,17 +33,17 @@
     <tr>
       <th scope="row">Body Fat</th>
       <td><%= user.body_fat %></td>
-
     </tr>
+
     <tr>
       <th scope="row">BMI</th>
       <td><%= user.bmi %></td>
-
     </tr>
+
     <tr>
       <th scope="row">Goal</th>
       <td><%= user.goal %></td>
-
     </tr>
+
   </tbody>
 </table>
