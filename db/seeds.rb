@@ -8,70 +8,101 @@
 Exercise.destroy_all
 
 
-users = User.create([
-                              {user_name: 'alvarofitness', password: 'alvarofitness', first_name: 'Alvaro', last_name: 'De La Torre'},
-                              {user_name: 'sydney', password: 'sydney', first_name: 'Sydney', last_name: 'Barlow'},
-                              {user_name: 'rayan', password: 'rayan', first_name: 'Rayan', last_name: 'Estupido'},
-                              {user_name: 'ruby', password: 'ruby', first_name: 'Ruby', last_name: 'Rails'},
-                              {user_name: 'emily', password: 'emily', first_name: 'Emily', last_name: 'Collins'},
-                              {user_name: 'jhon', password: 'jhon', first_name: 'Jonh', last_name: 'Kennedy'}
-                              ])
+user1 = User.create(user_name: 'alvarofitness', password: 'alvarofitness', first_name: 'Alvaro', last_name: 'De La Torre')
+user2 = User.create(user_name: 'sydney', password: 'sydney', first_name: 'Sydney', last_name: 'Barlow')
+user3 = User.create(user_name: 'rayan', password: 'rayan', first_name: 'Rayan', last_name: 'Estupido')
+user4 = User.create(user_name: 'ruby', password: 'ruby', first_name: 'Ruby', last_name: 'Rails')
+user5 = User.create(user_name: 'emily', password: 'emily', first_name: 'Emily', last_name: 'Collins')
+user6 = User.create(user_name: 'jhon', password: 'jhon', first_name: 'Jonh', last_name: 'Kennedy')
 
 
+exercise1 = Exercise.create(name: "Barbell Bench Press", muscle_group: "chest", muscle_part: "upper chest", high_intensity: false, equipment: true)
+exercise2 = Exercise.create(name: "Flat Bench Dumbbell Press",muscle_group: "chest", muscle_part: "upper chest", high_intensity: false, equipment: true)
+exercise3 = Exercise.create(name: "Flat Bench Dumbbell Fly", muscle_group: "chest", muscle_part: "upper chest", high_intensity: false, equipment: true)
+exercise4 = Exercise.create(name: "Low-Incline Barbell Bench Press", muscle_part: "upper chest", muscle_group: "chest", high_intensity: false, equipment: true)
+exercise5 = Exercise.create(name: "Low-Incline Bench Dumbbell Press", muscle_part: "upper chest", muscle_group: "chest", high_intensity: false, equipment: true)
+exercise6 = Exercise.create(name: "Low-Incline Bench Dumbbell Fly", muscle_part: "upper chest", muscle_group: "chest", high_intensity: false, equipment: true)
+exercise7 = Exercise.create(name: "Push-ups", muscle_part: "middle_chest", muscle_group: "chest", high_intensity: true, equipment: false)
+exercise8 = Exercise.create(name: "Incline Push-ups", muscle_part: "upper_chest", muscle_group: "chest", high_intensity: true, equipment: false)
+exercise9 = Exercise.create(name: "Single Arm Dumbbetel Row", muscle_part: "lats", muscle_group: "back", high_intensity: true, equipment: true)
+exercise10 = Exercise.create(name: "Wide Grip Pulldowns", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true)
+exercise11 = Exercise.create(name: "Under grip Pulldowns", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true)
+exercise12 = Exercise.create(name: "Seated Cable Close Grip Row", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true)
+exercise13 = Exercise.create(name: "Seated Cable Wide Grip Row", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true)
+exercise14 = Exercise.create(name: "Pull-ups", muscle_part: "upper_back", muscle_group: "back", high_intensity: true, equipment: false)
+exercise15 = Exercise.create(name: "Rowing Machine", muscle_part: "upper_back", muscle_group: "back", high_intensity: true, equipment: true)
+exercise16 = Exercise.create(name: "Seated Dumbbell Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true)
+exercise17 = Exercise.create(name: "Alternating Dumbbell Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true)
+exercise18 = Exercise.create(name: "Seated Arnold Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true)
+exercise19 = Exercise.create(name: "Alternating Arnold Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true)
+exercise20 = Exercise.create(name: "Seated Military Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true)
+exercise21 = Exercise.create(name: "Dumbbell Lateral Raises", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true)
+exercise22 = Exercise.create(name: "Body Weight Shoulder Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: true, equipment: false)
+exercise23 = Exercise.create(name: "Weighted Air Punches", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: true, equipment: false)
+exercise24 = Exercise.create(name: "Skull Crushers (Bar or Dumbbells)", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: true)
+exercise25 = Exercise.create(name: "Triceps Kickbacks (Cables or Dumbbells)", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: true)
+exercise26 = Exercise.create(name: "Close Grip Triceps Press", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: true)
+exercise27 = Exercise.create(name: "Triceps Dips", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: false)
+exercise28 = Exercise.create(name: "Rope Pushdowns", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: true)
+exercise29 = Exercise.create(name: "Straight Bar Pushdowns", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: true)
+exercise30 = Exercise.create(name: "Seated Dumbbell Curls", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true)
+exercise31 = Exercise.create(name: "Seated Incline Dumbbell Curls", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true)
+exercise32 = Exercise.create(name: "Hammer Dumbbell Curls (Seating or Standing)", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true)
+exercise33 = Exercise.create(name: "Ez Bar Close Grip Curls", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true)
+exercise34 = Exercise.create(name: "Ez Bar Wide Grip Curls", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true)
+exercise35 = Exercise.create(name: "21’s", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true)
+exercise36 = Exercise.create(name: "Leg Press", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: false, equipment: true)
+exercise37 = Exercise.create(name: "Seated Leg Press", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: false, equipment: true)
+exercise38 = Exercise.create(name: "Alternating Lunges", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: false, equipment: false)
+exercise39 = Exercise.create(name: "Stationary Lunges", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: false, equipment: false)
+exercise40 = Exercise.create(name: "Barbell Squats", muscle_part: "glutes", muscle_group: "legs", high_intensity: false, equipment: true)
+exercise41 = Exercise.create(name: "Jumping Squats", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: true, equipment: false)
+exercise42 = Exercise.create(name: "Jumping Lunges", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: true, equipment: false)
+exercise43 = Exercise.create(name: "360 Jumping Squats", muscle_part: "glutes", muscle_group: "legs", high_intensity: false, equipment: false)
+exercise44 = Exercise.create(name: "Crunches", muscle_part: "upper_abs", muscle_group: "abs", high_intensity: false, equipment: false)
+exercise45 = Exercise.create(name: "Sit-ups", muscle_part: "upper_abs", muscle_group: "abs", high_intensity: false, equipment: false)
+exercise46 = Exercise.create(name: "Plank", muscle_part: "core_strength", muscle_group: "abs", high_intensity: false, equipment: false)
+exercise47 = Exercise.create(name: "Side Plank", muscle_part: "obliques", muscle_group: "abs", high_intensity: false, equipment: false)
+exercise48 = Exercise.create(name: "Leg Raises", muscle_part: "lower_abs", muscle_group: "abs", high_intensity: false, equipment: false)
+exercise49 = Exercise.create(name: "Reverse Crunch", muscle_part: "lower_abs", muscle_group: "abs", high_intensity: false, equipment: false)
+exercise50 = Exercise.create(name: "Burpees", muscle_part: "", muscle_group: "full body", high_intensity: true, equipment: false)
+exercise51 = Exercise.create(name: "Jumping Jacks", muscle_part: "", muscle_group: "full body", high_intensity: true, equipment: false)
 
 
-exercises = Exercise.create([
-                                {name: "Barbell Bench Press", muscle_group: "upper chest", muscle_part: "chest", high_intensity: false, equipment: true},
-                                {name: "Flat Bench Dumbbell Press",muscle_group: "upper chest", muscle_part: "chest", high_intensity: false, equipment: true},
-                                {name: "Flat Bench Dumbbell Fly", muscle_group: "upper chest", muscle_part: "chest", high_intensity: false, equipment: true},
-                                {name: "Low-Incline Barbell Bench Press", muscle_part: "upper chest", muscle_group: "chest", high_intensity: false, equipment: true},
-                                {name: "Low-Incline Bench Dumbbell Press", muscle_part: "upper_chest", muscle_group: "chest", high_intensity: false, equipment: true},
-                                {name: "Low-Incline Bench Dumbbell Fly", muscle_part: "upper_chest", muscle_group: "chest", high_intensity: false, equipment: true},
-                                {name: "Push-ups", muscle_part: "middle_chest", muscle_group: "chest", high_intensity: true, equipment: false},
-                                {name: "Incline Push-ups", muscle_part: "upper_chest", muscle_group: "chest", high_intensity: true, equipment: false},
-                                {name: "Single Arm Dumbbell Row", muscle_part: "lats", muscle_group: "back", high_intensity: true, equipment: true},
-                                {name: "Wide Grip Pulldowns", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true},
-                                {name: "Under grip Pulldowns", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true},
-                                {name: "Straight Bar Cable Pulldown", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true},
-                                {name: "Seated Cable Close Grip Row", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true},
-                                {name: "Seated Cable Wide Grip Row", muscle_part: "lats", muscle_group: "back", high_intensity: false, equipment: true},
-                                {name: "Pull-ups", muscle_part: "upper_back", muscle_group: "back", high_intensity: true, equipment: false},
-                                {name: "Rowing Machine", muscle_part: "upper_back", muscle_group: "back", high_intensity: true, equipment: true},
-                                {name: "Seated Dumbbell Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true},
-                                {name: "Alternating Dumbbell Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true},
-                                {name: "Seated Arnold Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true },
-                                {name: "Alternating Arnold Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true},
-                                {name: "Seated Military Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true},
-                                {name: "Dumbbell Lateral Raises", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: false, equipment: true},
-                                {name: "Body Weight Shoulder Press", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: true, equipment: false},
-                                {name: "Weighted Air Punches", muscle_part: "middle_delt", muscle_group: "shoulders", high_intensity: true, equipment: false},
-                                {name: "Skull Crushers (Bar or Dumbbells)", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: true},
-                                {name: "Triceps Kickbacks (Cables or Dumbbells)", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: true},
-                                {name: "Close Grip Triceps Press", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: true},
-                                {name: "Triceps Dips", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: false},
-                                {name: "Rope Pushdowns", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: true},
-                                {name: "Straight Bar Pushdowns", muscle_part: "long_head", muscle_group: "triceps", high_intensity: false, equipment: true},
-                                {name: "Seated Dumbbell Curls", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true},
-                                {name: "Seated Incline Dumbbell Curls", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true},
-                                {name: "Hammer Dumbbell Curls (Seating or Standing)", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true},
-                                {name: "Ez Bar Close Grip Curls", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true},
-                                {name: "Ez Bar Wide Grip Curls", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true},
-                                {name: "21’s", muscle_part: "middle_head", muscle_group: "biceps", high_intensity: false, equipment: true},
-                                {name: "Leg Press", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: false, equipment: true},
-                                {name: "Seated Leg Press", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: false, equipment: true},
-                                {name: "Alternating Lunges", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: false, equipment: false},
-                                {name: "Stationary Lunges", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: false, equipment: false},
-                                {name: "Goblet Squats", muscle_part: "glutes", muscle_group: "legs", high_intensity: false, equipment: false},
-                                {name: "Barbell Squats", muscle_part: "glutes", muscle_group: "legs", high_intensity: false, equipment: true},
-                                {name: "Jumping Squats", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: true, equipment: false},
-                                {name: "Jumping Lunges", muscle_part: "hamstrings", muscle_group: "legs", high_intensity: true, equipment: false},
-                                {name: "360 Jumping Squats", muscle_part: "glutes", muscle_group: "legs", high_intensity: false, equipment: false},
-                                {name: "Crunches", muscle_part: "upper_abs", muscle_group: "abs", high_intensity: false, equipment: false},
-                                {name: "Sit-ups", muscle_part: "upper_abs", muscle_group: "abs", high_intensity: false, equipment: false},
-                                {name: "Plank", muscle_part: "core_strength", muscle_group: "abs", high_intensity: false, equipment: false},
-                                {name: "Side Plank", muscle_part: "obliques", muscle_group: "abs", high_intensity: false, equipment: false},
-                                {name: "Leg Raises", muscle_part: "lower_abs", muscle_group: "abs", high_intensity: false, equipment: false},
-                                {name: "Reverse Crunch", muscle_part: "lower_abs", muscle_group: "abs", high_intensity: false, equipment: false},
-                                {name: "Burpees", muscle_part: "", muscle_group: "full body", high_intensity: true, equipment: false},
-                                {name: "Jumping Jacks", muscle_part: "", muscle_group: "full body", high_intensity: true, equipment: false},
-                            ])
+workout1 = Workout.create(date: Date.today, user_id: user1.id)
+workout2 = Workout.create(date: Date.today, user_id: user1.id)
+workout3 = Workout.create(date: Date.today, user_id: user1.id)
+workout4 = Workout.create(date: Date.today, user_id: user2.id)
+workout5 = Workout.create(date: Date.today, user_id: user3.id)
+workout6 = Workout.create(date: Date.today, user_id: user3.id)
+
+workout_exercise1 = WorkoutExercise.create(workout_id: workout1.id, exercise_id: exercise1.id)
+workout_exercise2 = WorkoutExercise.create(workout_id: workout1.id, exercise_id: exercise2.id)
+workout_exercise3 = WorkoutExercise.create(workout_id: workout1.id, exercise_id: exercise3.id)
+workout_exercise4 = WorkoutExercise.create(workout_id: workout1.id, exercise_id: exercise4.id)
+workout_exercise5 = WorkoutExercise.create(workout_id: workout1.id, exercise_id: exercise5.id)
+workout_exercise6 = WorkoutExercise.create(workout_id: workout2.id, exercise_id: exercise6.id)
+workout_exercise7 = WorkoutExercise.create(workout_id: workout2.id, exercise_id: exercise7.id)
+workout_exercise8 = WorkoutExercise.create(workout_id: workout2.id, exercise_id: exercise8.id)
+workout_exercise9 = WorkoutExercise.create(workout_id: workout2.id, exercise_id: exercise9.id)
+workout_exercise10 = WorkoutExercise.create(workout_id: workout2.id, exercise_id: exercise10.id)
+workout_exercise11 = WorkoutExercise.create(workout_id: workout3.id, exercise_id: exercise11.id)
+workout_exercise12 = WorkoutExercise.create(workout_id: workout3.id, exercise_id: exercise12.id)
+workout_exercise13 = WorkoutExercise.create(workout_id: workout3.id, exercise_id: exercise13.id)
+workout_exercise14 = WorkoutExercise.create(workout_id: workout3.id, exercise_id: exercise14.id)
+workout_exercise15 = WorkoutExercise.create(workout_id: workout3.id, exercise_id: exercise15.id)
+workout_exercise16 = WorkoutExercise.create(workout_id: workout4.id, exercise_id: exercise16.id)
+workout_exercise17 = WorkoutExercise.create(workout_id: workout4.id, exercise_id: exercise17.id)
+workout_exercise18 = WorkoutExercise.create(workout_id: workout4.id, exercise_id: exercise18.id)
+workout_exercise19 = WorkoutExercise.create(workout_id: workout4.id, exercise_id: exercise19.id)
+workout_exercise20 = WorkoutExercise.create(workout_id: workout4.id, exercise_id: exercise20.id)
+workout_exercise21 = WorkoutExercise.create(workout_id: workout5.id, exercise_id: exercise21.id)
+workout_exercise22 = WorkoutExercise.create(workout_id: workout5.id, exercise_id: exercise22.id)
+workout_exercise23 = WorkoutExercise.create(workout_id: workout5.id, exercise_id: exercise23.id)
+workout_exercise24 = WorkoutExercise.create(workout_id: workout5.id, exercise_id: exercise24.id)
+workout_exercise25 = WorkoutExercise.create(workout_id: workout5.id, exercise_id: exercise25.id)
+workout_exercise26 = WorkoutExercise.create(workout_id: workout6.id, exercise_id: exercise26.id)
+workout_exercise27 = WorkoutExercise.create(workout_id: workout6.id, exercise_id: exercise27.id)
+workout_exercise28 = WorkoutExercise.create(workout_id: workout6.id, exercise_id: exercise28.id)
+workout_exercise29 = WorkoutExercise.create(workout_id: workout6.id, exercise_id: exercise29.id)
+workout_exercise30 = WorkoutExercise.create(workout_id: workout6.id, exercise_id: exercise30.id)

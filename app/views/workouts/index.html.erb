@@ -1,0 +1,4 @@
+<% @workouts.each do |workout| %>
+  <% muscles = workout.workout_exercises.map {|exercise| exercise.muscle_group }.uniq %>
+  <%= muscles %>
+<% end %>

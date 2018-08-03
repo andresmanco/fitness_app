@@ -3,10 +3,11 @@ class WorkoutsController < ApplicationController
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
 
   def index
-    @workouts = Workout.all
+    @workouts = Workout.all.select { |workout| workout.user_id == @user.id }
   end
 
   def show
+
   end
 
   def new
@@ -17,11 +18,12 @@ class WorkoutsController < ApplicationController
   def create
     @muscle_groups = ["Chest", "Back", "Shoulders", "Biceps", "Triceps", "Legs", "Abs", "Full-Body"]
     @workout = Workout.new(date: Date.today, user_id: @user.id)
-    arr = @workout.generate_random_workout(equipment= params[:equipment], muscle= params[:workout][:muscles])
-    @workout.exercises = arr
-    # binding.pry
+    exercises = @workout.generate_random_workout(equipment= params[:equipment], muscle= params[:workout][:muscles])
     if @workout.save
-      # binding.pry
+      exercises.each do |exercise|
+
+        @workout.workout_exercises.build(exercise_id: exercise.id).save
+      end
       redirect_to user_workout_path(@user, @workout)
     else
       render :new
