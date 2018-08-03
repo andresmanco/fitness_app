@@ -7,12 +7,10 @@ class SessionsController < ApplicationController
   def create
 
     checking_user = User.find_by(user_name: params[:user_name])
-    # @user = User.find_by(user_name: params[:user_name])
-    # binding.pry
-    if @user = checking_user.authenticate(params[:password])
-      binding.pry
-    # if @user != nil && @user.password == params[:password]
-      # binding.pry
+    if checking_user != nil
+      @user = checking_user.authenticate(params[:password])
+    end
+    if @user && @user.password == params[:password]
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
