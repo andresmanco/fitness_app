@@ -10,13 +10,13 @@ class SessionsController < ApplicationController
     @user = User.find_by(user_name: params[:user_name])
     # binding.pry
     # @user = checking_user.authenticate(params[:password])
-    binding.pry
+    # binding.pry
     if @user != nil && @user.password == params[:password]
-      binding.pry
+      # binding.pry
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
-      binding.pry
+      # binding.pry
       flash[:alert] = "Incorrect username or password DUMBASS"
       redirect_to login_path
     end
