@@ -1,5 +1,5 @@
 <div class="card">
-  <%= form_for workout, url: user_workouts_path(user) do |f| %>
+  <%= form_for [user, workout] do |f| %>
   <h3>Choose Up To 2 Muscles or a Full-Body Workout</h3>
   <% muscle_groups.each do |muscle_group| %>
   <%= f.label muscle_group %>

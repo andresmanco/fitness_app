@@ -1,1 +1,15 @@
-<%= @workout_exercises %>
+<br><br>
+<% @workout_exercises.each do |w_exercise| %>
+    <%= form_tag user_workout_workout_exercise_path(@user, w_exercise.workout, w_exercise), method: "patch" do %>
+    <h2><%= w_exercise.exercise.name %></h2>
+    <%= label_tag :weight %>
+    <%= text_field_tag :weight, w_exercise.weight.to_i  %>
+    <%= label_tag :sets %>
+    <%= text_field_tag :sets, w_exercise.sets.to_i %>
+    <%= label_tag :reps %>
+    <%= text_field_tag :reps, w_exercise.reps.to_i %>
+    <%= label_tag :rest_time %>
+    <%= text_field_tag :rest_time, w_exercise.rest_time.to_i %>
+    <%= submit_tag %>
+  <% end %>
+<% end %>
