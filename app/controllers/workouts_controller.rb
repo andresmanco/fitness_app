@@ -26,13 +26,14 @@ class WorkoutsController < ApplicationController
 
         @workout.workout_exercises.build(exercise_id: exercise.id).save
       end
-      redirect_to user_workout_path(@user, @workout)
+      redirect_to user_workout_workout_exercises_path(@user, @workout)
     else
       render :new
     end
   end
 
   def edit
+    @muscle_groups = ["Chest", "Back", "Shoulders", "Biceps", "Triceps", "Legs", "Abs", "Full-Body"]
   end
 
   def update

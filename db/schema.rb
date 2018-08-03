@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2018_07_31_174124) do
     t.integer "weight"
     t.integer "sets"
     t.integer "reps"
-    t.time "rest_time"
+    t.integer "rest_time"
     t.integer "workout_id"
     t.integer "exercise_id"
   end

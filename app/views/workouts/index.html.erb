@@ -19,7 +19,7 @@
 
     <tr>
       <th scope="row">Workout Date</th>
-      <td><%= link_to workout.date, user_workout_path(@user, workout) %></td>
+      <td><%= link_to workout.date, user_workout_workout_exercises_path(@user, workout) %></td>
     </tr>
 
     <% muscles = (workout.exercises.map {|exercise| exercise.muscle_group}).uniq %>
