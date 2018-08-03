@@ -20,34 +20,25 @@
             <a> Welcome, <%= user.full_name %></a>
           </button>
           <div class="dropdown-menu dropdown-toggle-split">
+            <li><%= link_to "My Stats", user_path(user) %></li>
             <li><%= link_to "Create New Workout", new_user_workout_path(user) %></li>
             <li><%= link_to "Check My Workout Log", user_workouts_path(user) %></li>
             <li><%= link_to "Edit Profile", edit_user_path(user) %></li>
             <li><%= link_to "Sign Out", logout_path, method: 'delete' %></li>
       <% else %>
-          <%= link_to "Log In ", login_path, class: 'btn-btn primary' %>
+          <%= link_to "Log In ", login_path, class: 'btn-btn primary'  %>
       <% end %>
       </div>
     </div>
   </nav>
 
-<div class="content">
-  <div class="content-inside">
-
 <%= yield %>
-  </div>
-</div>
-
-  <div class="container" id="alerts">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-  </div>
 
   <div class="footer">
     <div class="container">
       <p>💪 Alvaro & Andress Fitness | All rights reserved 💪</p>
     </div>
   </div>
-  </body>
 
+  </body>
 </html>
