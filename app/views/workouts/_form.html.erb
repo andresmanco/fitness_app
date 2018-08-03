@@ -1,6 +1,6 @@
 <div class="card">
   <%= form_for workout, url: user_workouts_path(user) do |f| %>
-  <h3>Pick up to 2 muscles</h3>
+  <h3>Choose Up To 2 Muscles or a Full-Body Workout</h3>
   <% muscle_groups.each do |muscle_group| %>
   <%= f.label muscle_group %>
   <%= f.check_box :muscles, {multiple: true}, muscle_group, false %><br>
