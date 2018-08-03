@@ -8,12 +8,12 @@
 Exercise.destroy_all
 
 
-user1 = User.create(user_name: 'alvarofitness', password: 'alvarofitness', first_name: 'Alvaro', last_name: 'De La Torre')
-user2 = User.create(user_name: 'sydney', password: 'sydney', first_name: 'Sydney', last_name: 'Barlow')
-user3 = User.create(user_name: 'rayan', password: 'rayan', first_name: 'Rayan', last_name: 'Estupido')
-user4 = User.create(user_name: 'ruby', password: 'ruby', first_name: 'Ruby', last_name: 'Rails')
-user5 = User.create(user_name: 'emily', password: 'emily', first_name: 'Emily', last_name: 'Collins')
-user6 = User.create(user_name: 'jhon', password: 'jhon', first_name: 'Jonh', last_name: 'Kennedy')
+user1 = User.create(user_name: 'alvarofitness', password: 'password', first_name: 'Alvaro', last_name: 'De La Torre')
+user2 = User.create(user_name: 'sydney', password: 'password', first_name: 'Sydney', last_name: 'Barlow')
+user3 = User.create(user_name: 'rayan', password: 'password', first_name: 'Rayan', last_name: 'Estupido')
+user4 = User.create(user_name: 'ruby', password: 'password', first_name: 'Ruby', last_name: 'Rails')
+user5 = User.create(user_name: 'emily', password: 'password', first_name: 'Emily', last_name: 'Collins')
+user6 = User.create(user_name: 'jhon', password: 'password', first_name: 'Jonh', last_name: 'Kennedy')
 
 
 exercise1 = Exercise.create(name: "Barbell Bench Press", muscle_group: "chest", muscle_part: "upper chest", high_intensity: false, equipment: true)

@@ -2,62 +2,57 @@
 <div class="card">
   <div class="card-block">
     <div class="row">
-      <div class="col-md-6">
-
-      <%= form_for user do |f| %>
-      <div class="form-group">
-        *<%= f.label :user_name %>
-        <%= f.text_field :user_name %>
-      </div>
-
-      <div class="form-group">
-        *<%= f.label :password %>
-        <%= f.text_field :password %>
-      </div>
-
-      <div class="form-group">
-        *<%= f.label :first_name %>
-        <%= f.text_field :first_name %>
-      </div>
-
-      <div class="form-group">
-        *<%= f.label :last_name%>
-        <%= f.text_field :last_name %>
-      </div>
 
 
-      <div class="form-group">
-        <%= f.label :weight %>
-        <%= f.number_field :weight, value: 0, class: :text_field, step: :any %>
-      </div>
-    </div>
+        <%= form_for user do |f| %>
+        <div class="form-group">
+          *<%= f.label :user_name %>
+          <%= f.text_field :user_name %>
+        </div>
 
+        <div class="form-group">
+          *<%= f.label :password %>
+          <%= f.text_field :password %>
+        </div>
 
-    <div class="col-md-6">
+        <div class="form-group">
+          *<%= f.label :first_name %>
+          <%= f.text_field :first_name %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :height %>
-        <%= f.number_field :height, value: 0, class: :text_field, step: :any %>
-      </div>
+        <div class="form-group">
+          *<%= f.label :last_name%>
+          <%= f.text_field :last_name %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :body_fat %>
-        <%= f.number_field :body_fat, value: 0, class: :text_field, step: :any %>
-      </div>
+        <div class="form-group">
+          <%= f.label :weight %>
+          <%= f.number_field :weight, value: 0, class: :text_field, step: :any %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :bmi %>
-        <%= f.number_field :bmi, value: 0, class: :text_field, step: :any %>
-      </div>
+        <div class="form-group">
+          <%= f.label :height %>
+          <%= f.number_field :height, value: 0, class: :text_field, step: :any %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :goal %>
-        <%= f.text_field :goal %>
-      </div>
-    </div>
+        <div class="form-group">
+          <%= f.label :body_fat %>
+          <%= f.number_field :body_fat, value: 0, class: :text_field, step: :any %>
+        </div>
 
-      <%= f.submit %>
-      <% end %>
+        <div class="form-group">
+          <%= f.label :bmi %>
+          <%= f.number_field :bmi, value: 0, class: :text_field, step: :any %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :goal %>
+          <%= f.text_field :goal %>
+        </div>
+
+        <%= f.submit %>
+        <% end %>
+        
     </div>
   </div>
 </div>
